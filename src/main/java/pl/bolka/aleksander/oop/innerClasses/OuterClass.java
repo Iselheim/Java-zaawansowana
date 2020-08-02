@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class OuterClass {
 
-  public class InnerClass{
+  public class InnerClass {
 
   }
 

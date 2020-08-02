@@ -1,4 +1,4 @@
-package pl.bolka.aleksander.oop.inheritance;
+package pl.bolka.aleksander.oop.inheritance.animals;
 
 public class Animal {
 
@@ -34,7 +34,19 @@ public class Animal {
     return age;
   }
 
-  protected void setAge(int age) {
+  protected final void setAge(int age) {
     this.age = age;
+  }
+
+  private void test() {
+
+  }
+
+  @Override
+  public String toString() {
+    return "Animal{" +
+           "name='" + name + '\'' +
+           ", age=" + age +
+           '}';
   }
 }

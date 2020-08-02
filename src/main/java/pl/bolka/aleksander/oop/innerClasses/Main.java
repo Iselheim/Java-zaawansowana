@@ -12,5 +12,7 @@ public class Main {
 
     outerClass.createAnonymousClass();
 
+    outerClass.sortNumbers();
+
   }
 }

@@ -1,6 +1,6 @@
-package pl.bolka.aleksander.oop.abstraction;
+package pl.bolka.aleksander.oop.inheritance.animals;
 
-public class Cat extends Animal implements Printable{
+public class Cat extends Animal {
 
   public Cat(String name, int age) {
     super(name, age);
@@ -12,7 +12,7 @@ public class Cat extends Animal implements Printable{
   }
 
   @Override
-  public void print() {
-
+  public String toString() {
+    return "Cat{} " + super.toString();
   }
 }
