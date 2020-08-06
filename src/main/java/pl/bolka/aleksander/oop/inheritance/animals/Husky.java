@@ -1,4 +1,4 @@
-package pl.bolka.aleksander.oop.inheritance;
+package pl.bolka.aleksander.oop.inheritance.animals;
 
 public class Husky extends Dog {
 

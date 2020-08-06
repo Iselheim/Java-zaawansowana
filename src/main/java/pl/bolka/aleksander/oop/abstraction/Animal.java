@@ -35,4 +35,12 @@ public abstract class Animal {
   protected void setAge(int age) {
     this.age = age;
   }
+
+  @Override
+  public String toString() {
+    return "Animal{" +
+           "name='" + name + '\'' +
+           ", age=" + age +
+           '}';
+  }
 }
