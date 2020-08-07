@@ -134,7 +134,7 @@ public class Main {
 //    Optional<User> user2 = Optional.empty();
     boolean present1 = user2.isPresent();
     System.out.println(present1);
-    System.out.println(user2.get());
+//    System.out.println(user2.get());
 
     User orElse = user2.orElse(new User());
     System.out.println(orElse);
@@ -159,6 +159,9 @@ public class Main {
         new User("user5", 66));
 
     Stream<User> stream = users.stream();
+
+    //WAZNE
+//    users.stream().forEach(user -> users.remove(user));
 
     List<User> usersAbove30 = users.stream()
                                    .filter(user -> user.getAge() > 30)
