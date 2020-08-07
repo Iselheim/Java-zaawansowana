@@ -1,6 +1,7 @@
 package pl.bolka.aleksander.oop.collections;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -13,6 +14,11 @@ public class Main {
     //List
     arrayList();
     linkedList();
+
+    //Map
+    hashMaps();
+    linkedHashMap();
+    treeMap();
   }
 
   private static void hashSets() {
@@ -47,6 +53,10 @@ public class Main {
     users2.add(new ExtendedUser("Maciek", 44));
     users2.add(new User("Rysiu"));
     users2.forEach(System.out::println);
+
+    for (User user : users2) {
+
+    }
   }
 
   private static void treeSets() {
@@ -115,6 +125,10 @@ public class Main {
 
     words.sort(String::compareTo);
     words.forEach(System.out::println);
+
+    for (String element : words) {
+
+    }
   }
 
   private static void linkedList() {
@@ -143,5 +157,85 @@ public class Main {
 
     words.sort(String::compareTo);
     words.forEach(System.out::println);
+  }
+
+  private static void hashMaps() {
+    Map<Integer, String> hashMap = new HashMap<>();
+    hashMap.put(1, "Jeden");
+    hashMap.put(2, "Dwa");
+    hashMap.put(3, "Trzy");
+    hashMap.put(2, "DwaDwa");
+
+    int size = hashMap.size();
+    System.out.println(size);
+
+    String byKey = hashMap.get(1);
+    System.out.println(byKey);
+
+    System.out.println(hashMap);
+    String remove = hashMap.remove(2);
+    System.out.println(remove);
+    System.out.println(hashMap);
+
+    boolean b = hashMap.containsKey(3);
+    System.out.println(b);
+
+    boolean jeden = hashMap.containsValue("Jeden");
+    System.out.println(jeden);
+
+    Set<Integer> integers = hashMap.keySet();
+    System.out.println(integers);
+
+    Collection<String> values = hashMap.values();
+    System.out.println(values);
+
+    Set<Map.Entry<Integer, String>> entries = hashMap.entrySet();
+    System.out.println(entries);
+
+    //    hashMap.stream();
+    Stream<Map.Entry<Integer, String>> stream = entries.stream();
+
+    HashMap<String, User> userHashMap = new HashMap<>();
+    userHashMap.put("Rysiu",new ExtendedUser("Rysiu", 33));
+
+//    userHashMap.for;
+    for (Map.Entry<String, User> stringUserEntry : userHashMap.entrySet()) {
+
+    }
+  }
+
+  public static void linkedHashMap() {
+    Map<Integer, String> ageToNames = new LinkedHashMap<>();
+    ageToNames.put(20, "Gosia");
+    ageToNames.put(40, "Kasia");
+    ageToNames.put(30, "Ania");
+
+  }
+
+  public static void treeMap(){
+    Map<Integer, Integer> numberToDigitsSum = new TreeMap<>();
+    numberToDigitsSum.put(33, 6);
+    numberToDigitsSum.put(19, 10);
+    numberToDigitsSum.put(24, 6);
+    numberToDigitsSum.forEach((key, value) -> System.out.println(key + " " + value));
+
+//    Map<UserWithoutHash, Integer> userWithoutHash = new TreeMap<>();
+//    userWithoutHash.put(new UserWithoutHash("c"), 1);
+//    userWithoutHash.put(new UserWithoutHash("z"), 1);
+//    userWithoutHash.put(new UserWithoutHash("a"), 1);
+//    System.out.println(userWithoutHash);
+
+
+    Map<UserWithComparable, Integer> users = new TreeMap<>();
+    users.put(new UserWithComparable("c"), 1);
+    users.put(new UserWithComparable("z"), 1);
+    users.put(new UserWithComparable("a"), 1);
+    System.out.println(users);
+
+    Map<String, Integer> sorted = new TreeMap<>(String::compareTo);
+    sorted.put("c", 1);
+    sorted.put("a", 1);
+    sorted.put("z", 1);
+    System.out.println(sorted);
   }
 }
