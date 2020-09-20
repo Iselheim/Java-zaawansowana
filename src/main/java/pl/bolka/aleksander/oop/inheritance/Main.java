@@ -8,7 +8,7 @@ public class Main {
     Animal animal = new Animal("bird");
     Cat cat = new Cat("Garfield", 10);
     Dog dog = new Dog("Reksio");
-    Husky husky = new Husky("Szarik", "biały");
+    Animal husky = new Husky("Szarik", "biały");
 
     Animal animal1 = new Animal("Kot");
     Animal animal2 = new Animal("Pies");

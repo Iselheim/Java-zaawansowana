@@ -6,9 +6,9 @@ import pl.bolka.aleksander.oop.generics.widlcards.*;
 public class Main {
 
   public static void main(String[] args) {
-    genericsBase();
-    inheritance();
-    wildCards();
+//    genericsBase();
+//    inheritance();
+//    wildCards();
     genericMethods();
   }
 
@@ -42,11 +42,11 @@ public class Main {
 //    User generic4 = badIntegerGenericClass2.getGeneric();
 
     GenericClassWithExtends<School> schoolGenericClassWithExtends = new GenericClassWithExtends<>();
-    School school = schoolGenericClassWithExtends.getT();
+    School school = schoolGenericClassWithExtends.getField();
 
     GenericClassWithExtends<House> houseGenericClassWithExtends = new GenericClassWithExtends<>();
-    houseGenericClassWithExtends.setT(new House());
-    House house = houseGenericClassWithExtends.getT();
+    houseGenericClassWithExtends.setField(new House());
+    House house = houseGenericClassWithExtends.getField();
 
     String name = houseGenericClassWithExtends.getName();
 
@@ -71,6 +71,7 @@ public class Main {
 //    genericsWildcards.method3(new Corsa(new PetrolEngine()));
     genericsWildcards.method3(new FakeCar());
 
+//    genericsWildcards.method4(new Car<PetrolEngine, TurboDieselEngine>(new PetrolEngine()));
     genericsWildcards.method4(new FakeCar());
 
 //    genericsWildcards.method5(new FakeCar());
@@ -80,15 +81,15 @@ public class Main {
   private static void genericMethods() {
     GenericMethods genericMethods = new GenericMethods();
     String[] stringTable = {"raz", "dwa", "trzy"};
-    genericMethods.printTable(stringTable);
+//    genericMethods.printTable(stringTable);
 
     Car[] cars = {new FakeCar(), new Corsa(new PetrolEngine()), new Passat(new DieselEngine())};
-    genericMethods.printTable(cars);
+//    genericMethods.printTable(cars);
 
-    System.out.println(genericMethods.returnFirst(stringTable));
+//    System.out.println(genericMethods.returnFirst(stringTable));
 
-    System.out.println(genericMethods.returnFirst(cars));
-
+//    System.out.println(genericMethods.returnFirst(cars));
+//
     System.out.println(genericMethods.getEngineName(cars[1]));
   }
 }

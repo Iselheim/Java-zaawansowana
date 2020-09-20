@@ -2,17 +2,17 @@ package pl.bolka.aleksander.oop.generics;
 
 public class GenericClassWithExtends<T extends Building> {
 
-  private T t;
+  private T field;
 
-  public T getT() {
-    return t;
+  public T getField() {
+    return field;
   }
 
-  public void setT(T t) {
-    this.t = t;
+  public void setField(T field) {
+    this.field = field;
   }
 
   public String getName() {
-    return t.getName();
+    return field.getName();
   }
 }

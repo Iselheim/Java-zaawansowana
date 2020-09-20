@@ -9,12 +9,12 @@ import pl.bolka.aleksander.oop.annotation.User;
 public class Main {
 
   public static void main(String[] args) {
-    lambda();
-    function();
-    supplier();
-    consumer();
-    predicate();
-    optional();
+//    lambda();
+//    function();
+//    supplier();
+//    consumer();
+//    predicate();
+//    optional();
     streams();
   }
 
@@ -61,7 +61,7 @@ public class Main {
 
     int i = longMethod.longMethod();
 
-//    Nameable nameable1 =  name -> throw new RuntimeException();
+//    Nameable nameable1 =  name -> {throw new RuntimeException();};
 
     Nameable nameable1 = name -> {
       throw new RuntimeException();
@@ -126,7 +126,7 @@ public class Main {
     boolean present = user.isPresent();
     User user1 = user.get();
 
-    //error
+//    error
 //    Optional<User> user2 = Optional.of(null);
 
     Optional<User> user2 = Optional.ofNullable(null);
@@ -177,7 +177,7 @@ public class Main {
     System.out.println(names);
 
     List<User> sortedUsers = users.stream()
-                                  .sorted((user, t1) -> ((Integer) user.getAge()).compareTo(t1.getAge()))
+                                  .sorted(Comparator.comparingInt(User::getAge))
                                   .collect(Collectors.toList());
     System.out.println(sortedUsers);
 

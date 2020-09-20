@@ -5,11 +5,11 @@ import java.lang.reflect.*;
 public class Main {
 
   public static void main(String[] args) {
-    classLevel();
-    methodLevel();
-    fieldLevel();
-    constructorLevel();
-
+//    classLevel();
+//    methodLevel();
+//    fieldLevel();
+//    constructorLevel();
+//
     annotationUsage();
   }
 
@@ -55,7 +55,7 @@ public class Main {
     try {
       User user = new User("Rysio");
       Field name = User.class.getDeclaredField("name");
-      name.set(user, "Waldek");
+//      name.set(user, "Waldek");
 
       name.setAccessible(true);
       name.set(user, "Waldek");

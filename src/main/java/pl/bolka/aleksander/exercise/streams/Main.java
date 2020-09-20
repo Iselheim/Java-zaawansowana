@@ -1,5 +1,6 @@
 package pl.bolka.aleksander.exercise.streams;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -13,10 +14,26 @@ public class Main {
     List<Account> accounts = bank.getAccounts();
 
     //Pobierz wszystkie imiona właścicieli kont
+    List<String> collect = accounts.stream()
+                                   .map(account -> account.getOwner().getName())
+                                   .collect(Collectors.toList());
+
+    List<String> names = new ArrayList<>();
+    for (Account account : accounts) {
+      names.add(account.getOwner().getName());
+    }
+
+    System.out.println(collect);
+    System.out.println();
+    System.out.println(names);
 
     // Wylicz sumę jaka jest zdeponowana w banku w PLN
 
     // Pokaż wszystkich użytkowników którzy są niepełnoletni
+    List<Owner> collect1 = accounts.stream()
+                                     .filter(account -> account.getOwner().getAge() < 18)
+                                     .map(Account::getOwner)
+                                     .collect(Collectors.toList());
 
     // Oblicz sumę pieniędzy zdeponowana w banku użytkowników pełnoletnich. Sumę podaj w euro.
 
