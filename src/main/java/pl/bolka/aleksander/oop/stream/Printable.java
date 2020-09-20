@@ -3,7 +3,7 @@ package pl.bolka.aleksander.oop.stream;
 import java.time.LocalDate;
 
 // SAM
-//@FunctionalInterface
+@FunctionalInterface
 public interface Printable {
 
   String asString();

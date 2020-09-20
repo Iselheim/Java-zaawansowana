@@ -6,4 +6,8 @@ public class House extends Building {
   public String getName() {
     return "Dom";
   }
+
+  public void empty(){
+
+  }
 }

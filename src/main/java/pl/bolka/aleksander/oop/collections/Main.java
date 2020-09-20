@@ -67,12 +67,12 @@ public class Main {
     numbersSet.add(1);
     numbersSet.forEach(System.out::println);
 
-//    Set<User> users = new TreeSet<>();
-//    users.add(new User("Janek"));
-//    users.add(new User("Janek"));
-//    users.add(new User("Maciek"));
-//    users.add(new User("Rysiu"));
-//    users.forEach(System.out::println);
+    Set<User> users = new TreeSet<>();
+    users.add(new User("Janek"));
+    users.add(new User("Janek"));
+    users.add(new User("Maciek"));
+    users.add(new User("Rysiu"));
+    users.forEach(System.out::println);
 
     Set<UserWithComparable> comparableUsers = new TreeSet<>();
     comparableUsers.add(new UserWithComparable("Janek"));
