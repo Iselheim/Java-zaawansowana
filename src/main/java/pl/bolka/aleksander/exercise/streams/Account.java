@@ -9,7 +9,7 @@ public class Account {
   public Account(Money money, Owner owner) {
     this.money = money;
     this.owner = owner;
-    // To jest komentarz
+    // To jest komentarz 2
   }
 
   public Money getMoney() {
